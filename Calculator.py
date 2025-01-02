@@ -15,6 +15,9 @@ def divide(x, y):
         return "Error: Division by zero is not allowed!"
     return x / y
 
+def square(x):
+    return x*x
+
 def square_root(x):
     if x < 0:
         return "Error: Square root of a negative number is not real!"
@@ -23,15 +26,15 @@ def square_root(x):
 # Main calculator function
 def Calculator():
     while True:
-        print("\nSelect An Operation: \n 1. Add \n 2. Subtract \n 3. Multiply \n 4. Divide \n 5. Find Square Root \n 6. Exit")
+        print("\nSelect An Operation: \n 1. Add \n 2. Subtract \n 3. Multiply \n 4. Divide \n 5. Find Square Root \n 6. Find The Sqaure  \n 7. Exit")
         
         choice = input("Enter Your Choice: ")
 
-        if choice == '6':
+        if choice == '7':
             print("Thanks for Using The Program!!")
             break
 
-        if choice in ['1', '2', '3', '4']:
+        if choice in ['1', '2', '3', '4','5']:
             num1 = float(input("Enter First Number: "))
             num2 = float(input("Enter Second Number: "))
 
@@ -52,6 +55,14 @@ def Calculator():
             num = float(input("Enter a number to find its square root: "))
             result = square_root(num)
             print(f"Square root of {num} = {result}")
+
+        if choice == '6':
+            Sqaure_Num = int(input("Enter The No. To Find The Square: "))
+            print("The Sqaure Of", Sqaure_Num, "is :-  ", Sqaure_Num * Sqaure_Num)
+                
+
+
+            
 
         else:
             print("Invalid choice! Please select a valid operation.")
