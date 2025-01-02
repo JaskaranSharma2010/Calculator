@@ -23,14 +23,24 @@ def square_root(x):
         return "Error: Square root of a negative number is not real!"
     return math.sqrt(x)
 
+def calculate_percentage(part, whole):
+    return (part / whole) * 100
+
 # Main calculator function
 def Calculator():
     while True:
-        print("\nSelect An Operation: \n 1. Add \n 2. Subtract \n 3. Multiply \n 4. Divide \n 5. Find Square Root \n 6. Find The Sqaure  \n 7. Exit")
+        print("\nSelect An Operation: \n 1. Add \n 2. Subtract \n 3. Multiply \n 4. Divide \n 5. Find Square Root \n 6. Find The Sqaure  \n 7.Find The Percentage \n 8. Exit")
         
         choice = input("Enter Your Choice: ")
 
         if choice == '7':
+            part = float(input("Enter the part: "))
+            whole = float(input("Enter the whole number: "))
+            result = calculate_percentage(part, whole)
+            print(f"The percentage is: {result:.2f}%")
+            continue
+
+        if choice == '8':
             print("Thanks for Using The Program!!")
             break
 
@@ -68,4 +78,4 @@ def Calculator():
             print("Invalid choice! Please select a valid operation.")
 
 if __name__ == "__main__":
-    Calculator()
+    Calculator()    
